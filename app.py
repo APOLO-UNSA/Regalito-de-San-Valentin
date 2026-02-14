@@ -7,8 +7,8 @@ import random
 st.set_page_config(page_title="Regalo 3D", layout="wide")
 
 def crear_corazon_pro(off_x=0, off_y=0, off_z=0, escala=1.0):
-    # Aumentamos de 50 a 100 o 150 para bordes mucho más suaves
-    res = 100
+    # Aumentamos de 50 a 50 o 150 para bordes mucho más suaves
+    res = 80
     t = np.linspace(0, 2 * np.pi, res)
     phi = np.linspace(0, np.pi, res)
     T, PHI = np.meshgrid(t, phi)
@@ -27,11 +27,11 @@ st.title("❤️ Un detalle especial para mi pooooosaa bella poooooosaaaa ❤️
 fig = go.Figure()
 
 # Generamos 15 corazones
-for i in range(30):
+for i in range(15):
     x, y, z = crear_corazon_pro(
-        random.uniform(-100, 100), 
-        random.uniform(-100, 100), 
-        random.uniform(-100, 100), 
+        random.uniform(-50, 50), 
+        random.uniform(-50, 50), 
+        random.uniform(-50, 50), 
         random.uniform(0.6, 1.3)
     )
     fig.add_trace(go.Mesh3d(
@@ -60,4 +60,5 @@ fig.update_layout(
 st.plotly_chart(fig, use_container_width=True)
 
 st.markdown("<h2 style='text-align: center;'>¡Espero que te guste muchisimo mi detallito bella bebeee!</h2>", unsafe_allow_html=True)
+
 st.markdown("<h2 style='text-align: center;'>Así de grande es el universo de amor que me haces sentir bella bebe</h2>", unsafe_allow_html=True)

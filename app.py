@@ -29,9 +29,9 @@ fig = go.Figure()
 # Generamos 15 corazones
 for i in range(15):
     x, y, z = crear_corazon_pro(
-        random.uniform(-50, 50), 
-        random.uniform(-50, 50), 
-        random.uniform(-50, 50), 
+        random.uniform(-80, 80), 
+        random.uniform(-80, 80), 
+        random.uniform(-80, 80), 
         random.uniform(0.6, 1.3)
     )
     fig.add_trace(go.Mesh3d(
@@ -62,3 +62,4 @@ st.plotly_chart(fig, use_container_width=True)
 st.markdown("<h2 style='text-align: center;'>¡Espero que te guste muchisimo mi detallito bella bebeee!</h2>", unsafe_allow_html=True)
 
 st.markdown("<h2 style='text-align: center;'>Así de grande es el universo de amor que me haces sentir bella bebe</h2>", unsafe_allow_html=True)
+
